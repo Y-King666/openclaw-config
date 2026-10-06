@@ -1,0 +1,6 @@
+# Environment variables — holds real API keys, never commit
+.env
+
+# OS noise
+.DS_Store
+Thumbs.db

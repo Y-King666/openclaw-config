@@ -1,0 +1,856 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.4.1",
+    "lastTouchedAt": "2026-04-02T12:07:49.862Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-31T11:29:36.457Z",
+    "lastRunVersion": "2026.3.28",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "update": {
+    "channel": "stable",
+    "checkOnStart": true
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "bailian": {
+        "baseUrl": "https://coding.dashscope.aliyuncs.com/v1",
+        "apiKey": "sk-XXXXXX",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen3.5-plus",
+            "name": "qwen3.5-plus",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 1000000,
+            "maxTokens": 65536,
+            "compat": {
+              "thinkingFormat": "qwen"
+            }
+          },
+          {
+            "id": "MiniMax-M2.5",
+            "name": "MiniMax-M2.5",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 196608,
+            "maxTokens": 32768
+          },
+          {
+            "id": "glm-5",
+            "name": "glm-5",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 202752,
+            "maxTokens": 16384,
+            "compat": {
+              "thinkingFormat": "qwen"
+            }
+          },
+          {
+            "id": "kimi-k2.5",
+            "name": "kimi-k2.5",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 32768,
+            "compat": {
+              "thinkingFormat": "qwen"
+            }
+          }
+        ]
+      },
+      "antigravity": {
+        "baseUrl": "http://127.0.0.1:8045/v1",
+        "apiKey": "sk-XXXXXX",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "gemini-3.1-pro-high",
+            "name": "Gemini 3.1 Pro High",
+            "api": "openai-completions",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 2000000,
+            "maxTokens": 65536
+          },
+          {
+            "id": "claude-opus-4-6-thinking",
+            "name": "Claude Opus 4.6 Thinking",
+            "api": "openai-completions",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 64000
+          },
+          {
+            "id": "gemini-2.5-flash-thinking",
+            "name": "Gemini 2.5 Flash Thinking",
+            "api": "openai-completions",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 1000000,
+            "maxTokens": 65536
+          },
+          {
+            "id": "gemini-3-flash",
+            "name": "Gemini 3 Flash",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 1000000,
+            "maxTokens": 65536
+          },
+          {
+            "id": "gemini-3.1-flash-image",
+            "name": "Gemini 3.1 Flash Image",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 1000000,
+            "maxTokens": 16384
+          }
+        ]
+      },
+      "gptsapi": {
+        "baseUrl": "https://api.gptsapi.net/v1",
+        "apiKey": "sk-XXXXXX",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "gemini-3-flash-preview",
+            "name": "Gemini 3 Flash Preview",
+            "api": "openai-completions",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 1000000,
+            "maxTokens": 65536
+          }
+        ]
+      },
+      "ollama": {
+        "baseUrl": "http://127.0.0.1:11434",
+        "apiKey": "ollama-local",
+        "api": "ollama",
+        "models": [
+          {
+            "id": "nomic-embed-text:latest",
+            "name": "nomic-embed-text:latest",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 2048,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "qwen3.5",
+        "fallbacks": [
+          "k2.5",
+          "m2.5",
+          "glm5"
+        ]
+      },
+      "models": {
+        "bailian/qwen3.5-plus": {
+          "alias": "qwen3.5"
+        },
+        "bailian/MiniMax-M2.5": {
+          "alias": "m2.5"
+        },
+        "bailian/glm-5": {
+          "alias": "glm5"
+        },
+        "bailian/kimi-k2.5": {
+          "alias": "k2.5"
+        },
+        "antigravity/gemini-3.1-pro-high": {
+          "alias": "gemini-3.1-pro-high"
+        },
+        "antigravity/claude-opus-4-6-thinking": {
+          "alias": "claude-opus-4-6-thinking"
+        },
+        "antigravity/gemini-3-flash": {
+          "alias": "gemini-3-flash"
+        },
+        "antigravity/gemini-2.5-flash-thinking": {
+          "alias": "gemini-2.5-flash-thinking"
+        },
+        "antigravity/gemini-3.1-flash-image": {
+          "alias": "gemini-3.1-flash-image"
+        },
+        "ollama/nomic-embed-text:latest": {}
+      },
+      "workspace": "/home/zhang/.openclaw/workspace",
+      "userTimezone": "Asia/Shanghai",
+      "timeFormat": "24",
+      "memorySearch": {
+        "enabled": true,
+        "provider": "ollama",
+        "fallback": "none",
+        "model": "nomic-embed-text",
+        "query": {
+          "hybrid": {
+            "enabled": true,
+            "vectorWeight": 0.7,
+            "textWeight": 0.3,
+            "candidateMultiplier": 4,
+            "mmr": {
+              "enabled": true,
+              "lambda": 0.7
+            },
+            "temporalDecay": {
+              "enabled": true,
+              "halfLifeDays": 30
+            }
+          }
+        },
+        "cache": {
+          "enabled": true
+        }
+      },
+      "compaction": {
+        "mode": "safeguard",
+        "reserveTokensFloor": 24000,
+        "identifierPolicy": "strict",
+        "postCompactionSections": [
+          "Session Startup",
+          "Red Lines"
+        ],
+        "model": "k2.5",
+        "timeoutSeconds": 900,
+        "memoryFlush": {
+          "enabled": true,
+          "softThresholdTokens": 6000,
+          "prompt": "Write any lasting notes to memory/YYYY-MM-DD.md; reply with NO_REPLY if nothing to store.",
+          "systemPrompt": "Session nearing compaction. Store durable memories now."
+        }
+      },
+      "thinkingDefault": "high",
+      "imageMaxDimensionPx": 2400,
+      "heartbeat": {
+        "every": "60m",
+        "activeHours": {
+          "start": "08:00",
+          "end": "22:00"
+        }
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "default": true,
+        "workspace": "/home/zhang/.openclaw/workspace",
+        "agentDir": "/home/zhang/.openclaw/agents/main/agent",
+        "skills": [
+          "feishu-doc",
+          "feishu-drive",
+          "feishu-perm",
+          "feishu-wiki",
+          "clawhub",
+          "github",
+          "skill-creator",
+          "weather",
+          "brainstorming",
+          "canvas-design",
+          "docx",
+          "pdf",
+          "pptx",
+          "systematic-debugging",
+          "using-superpowers",
+          "webapp-testing",
+          "writing-plans",
+          "xlsx"
+        ],
+        "heartbeat": {
+          "every": "6h",
+          "activeHours": {
+            "start": "08:00",
+            "end": "22:00",
+            "timezone": "Asia/Shanghai"
+          }
+        },
+        "identity": {
+          "name": "贾维斯",
+          "emoji": "🤖"
+        },
+        "tools": {
+          "deny": [
+            "x_search",
+            "memory_search",
+            "memory_get",
+            "canvas",
+            "nodes",
+            "image_generate",
+            "tts"
+          ]
+        }
+      },
+      {
+        "id": "coder",
+        "workspace": "/home/zhang/.openclaw/workspace/workspace-coder",
+        "agentDir": "/home/zhang/.openclaw/agents/coder/agent",
+        "model": {
+          "primary": "glm5",
+          "fallbacks": [
+            "m2.5",
+            "qwen3.5",
+            "k2.5"
+          ]
+        },
+        "skills": [
+          "feishu-doc",
+          "feishu-drive",
+          "feishu-perm",
+          "feishu-wiki",
+          "clawhub",
+          "github",
+          "skill-creator",
+          "weather"
+        ],
+        "heartbeat": {
+          "every": "0m",
+          "activeHours": {
+            "start": "08:00",
+            "end": "22:00",
+            "timezone": "Asia/Shanghai"
+          }
+        },
+        "identity": {
+          "name": "无敌码农",
+          "emoji": "💻"
+        },
+        "tools": {
+          "deny": [
+            "x_search",
+            "memory_search",
+            "memory_get",
+            "canvas",
+            "nodes",
+            "image_generate",
+            "tts"
+          ]
+        }
+      },
+      {
+        "id": "tester",
+        "workspace": "/home/zhang/.openclaw/workspace/workspace-tester",
+        "agentDir": "/home/zhang/.openclaw/agents/tester/agent",
+        "model": {
+          "primary": "glm5",
+          "fallbacks": [
+            "m2.5",
+            "qwen3.5",
+            "k2.5"
+          ]
+        },
+        "skills": [
+          "feishu-doc",
+          "feishu-drive",
+          "feishu-perm",
+          "feishu-wiki",
+          "clawhub",
+          "github",
+          "skill-creator",
+          "weather"
+        ],
+        "heartbeat": {
+          "every": "0m",
+          "activeHours": {
+            "start": "08:00",
+            "end": "22:00",
+            "timezone": "Asia/Shanghai"
+          }
+        },
+        "identity": {
+          "name": "无敌测试",
+          "emoji": "✅"
+        },
+        "tools": {
+          "deny": [
+            "x_search",
+            "memory_search",
+            "memory_get",
+            "canvas",
+            "nodes",
+            "image_generate",
+            "tts"
+          ]
+        }
+      },
+      {
+        "id": "editor",
+        "workspace": "/home/zhang/.openclaw/workspace/workspace-editor",
+        "agentDir": "/home/zhang/.openclaw/agents/editor/agent",
+        "model": {
+          "primary": "k2.5",
+          "fallbacks": [
+            "qwen3.5",
+            "m2.5",
+            "glm5"
+          ]
+        },
+        "skills": [
+          "feishu-doc",
+          "feishu-drive",
+          "feishu-perm",
+          "feishu-wiki",
+          "clawhub",
+          "github",
+          "skill-creator",
+          "weather"
+        ],
+        "heartbeat": {
+          "every": "0m",
+          "activeHours": {
+            "start": "08:00",
+            "end": "22:00",
+            "timezone": "Asia/Shanghai"
+          }
+        },
+        "identity": {
+          "name": "超级编辑",
+          "emoji": "📝"
+        },
+        "tools": {
+          "deny": [
+            "x_search",
+            "memory_search",
+            "memory_get",
+            "canvas",
+            "nodes",
+            "image_generate",
+            "tts"
+          ]
+        }
+      }
+    ]
+  },
+  "tools": {
+    "profile": "full",
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "duckduckgo"
+      },
+      "fetch": {
+        "enabled": true
+      }
+    },
+    "sessions": {
+      "visibility": "all"
+    },
+    "agentToAgent": {
+      "enabled": true
+    }
+  },
+  "bindings": [
+    {
+      "type": "route",
+      "agentId": "main",
+      "match": {
+        "channel": "feishu",
+        "accountId": "default"
+      }
+    },
+    {
+      "type": "route",
+      "agentId": "coder",
+      "match": {
+        "channel": "feishu",
+        "accountId": "coder"
+      }
+    },
+    {
+      "type": "route",
+      "agentId": "tester",
+      "match": {
+        "channel": "feishu",
+        "accountId": "tester"
+      }
+    },
+    {
+      "type": "route",
+      "agentId": "editor",
+      "match": {
+        "channel": "feishu",
+        "accountId": "editor"
+      }
+    }
+  ],
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "text": true,
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "cron": {
+    "enabled": true
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "feishu": {
+      "enabled": true,
+      "connectionMode": "websocket",
+      "domain": "feishu",
+      "groupPolicy": "allowlist",
+      "groupAllowFrom": [
+        "oc_XXXXXX"
+      ],
+      "webhookPath": "/feishu/events",
+      "dmPolicy": "pairing",
+      "reactionNotifications": "own",
+      "typingIndicator": true,
+      "streaming": true,
+      "resolveSenderNames": true,
+      "accounts": {
+        "default": {
+          "appId": "cli_XXXXXX",
+          "appSecret": "XXXXXX"
+        },
+        "coder": {
+          "appId": "cli_XXXXXX",
+          "appSecret": "XXXXXX"
+        },
+        "tester": {
+          "appId": "cli_XXXXXX",
+          "appSecret": "XXXXXX"
+        },
+        "editor": {
+          "appId": "cli_XXXXXX",
+          "appSecret": "XXXXXX"
+        }
+      },
+      "groups": {
+        "oc_XXXXXX": {
+          "enabled": true,
+          "requireMention": true
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "controlUi": {
+      "allowInsecureAuth": true
+    },
+    "auth": {
+      "mode": "token",
+      "token": "XXXXXX"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "reload": {
+      "mode": "hybrid",
+      "debounceMs": 300
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send"
+      ]
+    }
+  },
+  "skills": {
+    "allowBundled": [
+      "skill-creator",
+      "github",
+      "clawhub",
+      "weather"
+    ],
+    "install": {
+      "nodeManager": "npm"
+    },
+    "entries": {
+      "1password": {
+        "enabled": false
+      },
+      "apple-notes": {
+        "enabled": false
+      },
+      "apple-reminders": {
+        "enabled": false
+      },
+      "bear-notes": {
+        "enabled": false
+      },
+      "blogwatcher": {
+        "enabled": false
+      },
+      "blucli": {
+        "enabled": false
+      },
+      "bluebubbles": {
+        "enabled": false
+      },
+      "clawflow-inbox-triage": {
+        "enabled": false
+      },
+      "clawflow": {
+        "enabled": false
+      },
+      "camsnap": {
+        "enabled": false
+      },
+      "coding-agent": {
+        "enabled": false
+      },
+      "discord": {
+        "enabled": false
+      },
+      "eightctl": {
+        "enabled": false
+      },
+      "gemini": {
+        "enabled": false
+      },
+      "gh-issues": {
+        "enabled": false
+      },
+      "gifgrep": {
+        "enabled": false
+      },
+      "github": {
+        "enabled": true
+      },
+      "gog": {
+        "enabled": false
+      },
+      "goplaces": {
+        "enabled": false
+      },
+      "healthcheck": {
+        "enabled": false
+      },
+      "himalaya": {
+        "enabled": false
+      },
+      "imsg": {
+        "enabled": false
+      },
+      "mcporter": {
+        "enabled": false
+      },
+      "model-usage": {
+        "enabled": false
+      },
+      "nano-pdf": {
+        "enabled": false
+      },
+      "node-connect": {
+        "enabled": false
+      },
+      "notion": {
+        "enabled": false
+      },
+      "obsidian": {
+        "enabled": false
+      },
+      "openai-whisper": {
+        "enabled": false
+      },
+      "openai-whisper-api": {
+        "enabled": false
+      },
+      "openhue": {
+        "enabled": false
+      },
+      "oracle": {
+        "enabled": false
+      },
+      "ordercli": {
+        "enabled": false
+      },
+      "peekaboo": {
+        "enabled": false
+      },
+      "sag": {
+        "enabled": false
+      },
+      "session-logs": {
+        "enabled": false
+      },
+      "sherpa-onnx-tts": {
+        "enabled": false
+      },
+      "slack": {
+        "enabled": false
+      },
+      "songsee": {
+        "enabled": false
+      },
+      "sonoscli": {
+        "enabled": false
+      },
+      "spotify-player": {
+        "enabled": false
+      },
+      "things-mac": {
+        "enabled": false
+      },
+      "summarize": {
+        "enabled": false
+      },
+      "tmux": {
+        "enabled": false
+      },
+      "trello": {
+        "enabled": false
+      },
+      "video-frames": {
+        "enabled": false
+      },
+      "voice-call": {
+        "enabled": false
+      },
+      "wacli": {
+        "enabled": false
+      },
+      "xurl": {
+        "enabled": false
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "feishu": {
+        "enabled": true,
+        "config": {}
+      },
+      "duckduckgo": {
+        "enabled": true,
+        "config": {}
+      }
+    }
+  }
+}
